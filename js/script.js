@@ -9,14 +9,10 @@ rangeInput.addEventListener('input', () => {
     // Change color based on percentage thresholds
     if (progressValue < 35) {
         progressBar.style.backgroundColor = 'green'; 
-        progressLabel.style.color = 'green'; 
-
     } else if (progressValue < 65) {
         progressBar.style.backgroundColor = '#ffc107'; 
-        progressLabel.style.color = '#ffc107'; 
     } else {
         progressBar.style.backgroundColor = '#dc3545'; 
-        progressLabel.style.color = '#dc3545'; 
     }
 
     progressLabel.textContent = `${progressValue}%`;
