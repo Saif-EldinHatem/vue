@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poultry Tracking</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container-fluid px-5 ">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+          <div class="col-md-3 mb-2 mb-md-0">
+            <a href="index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
+                
+            <h2><img src="images/chicken (1).png" alt="chicken icon" height="30"> vue</h2>
+            </a>
+          </div>
+    
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="index.html" class="nav-link px-2 link-body-emphasis">Home</a></li>
+            <li><a href="index.html#features" class="nav-link px-2 link-body-emphasis">Features</a></li>
+            <li><a href="" class="nav-link px-2 link-secondary">Tracking</a></li>
+          </ul>
+    
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-success me-xl-2">Request Service</button>
+            <!-- <button type="button" class="btn btn-dark">Sign-up</button> -->
+          </div>
+        </header>
+      </div>
+
+      <!-- tracking title section -->
+    <section>
+            <div class="px-4 py-5 text-center">
+                <div class="py-5">
+                  <h1 class="display-5 fw-bold"><span class="text-success">Monitor</span> and <span class="text-success">control</span> your poultry farm</h1>
+                  <div class="col-lg-6 mx-auto">
+                    <p class="fs-5 mb-4 text-body-tertiary border-bottom">You have easier and wider control of your poultry farm just by the click of a button.</p>
+                  </div>
+                </div>
+              </div>
+        
+    </section>
+
+    <!-- tracking section -->
+    <section>
+        <div class="container d-grid gap-3 px-5 mb-5">
+            <div class="row" style="height: 80vh;">    
+                <!-- First column -->
+                <div class="col-md-6 d-flex flex-column gap-3">
+                    <!-- First row -->
+                    <div class="box d-flex justify-content-center bg-body-tertiary border border-dark border-5  rounded-4">
+                        <div class="d-flex flex-column align-items-center gap-2 justify-content-center">
+                            <h2 class="fw-bold"><img class="icons" src="images/thermometer.svg" alt="thermometer">Temperature</h2>
+                            <div class="thermostat">
+                                <img src="images/circle.svg" alt="" height="260">
+                                <div class="thermo-value fw-bold">98.2 F</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second row -->
+                    <div class="box d-flex justify-content-center border border-dark border-5 rounded-4 bg-body-tertiary">
+
+                        <div class="d-flex flex-column align-items-center gap-2 justify-content-center">
+                            <h2 class="fw-bold"><img class="icons" src="images/humidity-svgrepo-com.svg" alt="thermometer">Humidity</h2>
+                            <div class="thermostat">
+                                <img src="images/circle.svg" alt="" height="260">
+                                <div class="thermo-value fw-bold">37%</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                <!-- Second Column -->
+                <div class="col-md-6 d-flex flex-column gap-2 align-items-center box border border-dark rounded-4 border-5 pt-4 bg-body-tertiary">
+                    <!-- first row -->
+                    <h2 class="fw-bold "><img class="icons" src="images/bulp-svgrepo-com.svg" alt="bulp">Intensity</h2>
+                    <div class="thermostat mb-4">
+                        <img src="images/circle.svg" alt="" height="260">
+                        <div class="thermo-value fw-bold" id="progressLabel">0%</div>
+                    </div>
+
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress"></div>
+                    </div>
+                    <input type="range" id="rangeInput" min="0" max="100" value="0" class="mb-5">
+
+                    <h2 class="mt-5 fw-bold "><img class="icons" src="images/vent-svgrepo-com.svg" alt="bulp"> Venting</h2>
+
+                    <button id="toggleButton"  class="btn btn-danger px-5">Off</button>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+.gradient-background {
+  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#myContent {
+  height: 100vh;
+}
+
+.thermostat{
+  position:relative;
+}
+
+.thermo-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 39px;
+}
+
+.icons{
+ height: 40px;
+}
+
+.box{
+  height:100%;
+}
+
+.progress-container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  transition: width 0.3s;
+}
+
+input[type="range"] {
+  width: 80%;
+  margin: 20px auto;
+}
+
+#progressLabel {
+  font-weight: bold;
+}
+
+
+
+input[type="range"] {
+  accent-color: black;
+}
