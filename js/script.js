@@ -7,6 +7,7 @@ let toggleTheme = document.querySelector("html");
 let darkOn = false;
 
 document.getElementById("theme").addEventListener("click", function(){
+    console.log("here");
     darkOn = !darkOn
     console.log(darkOn);
     if(darkOn){
