@@ -2,6 +2,24 @@ const progressBar = document.getElementById('progress');
 const rangeInput = document.getElementById('rangeInput');
 const progressLabel = document.getElementById('progressLabel');
 
+//dark mode
+let toggleTheme = document.querySelector("html");
+let darkOn = false;
+
+document.getElementById("theme").addEventListener("click", function(){
+    darkOn = !darkOn
+    if(darkOn){
+        toggleTheme.setAttribute("data-bs-theme", "dark");
+        document.getElementById("theme").setAttribute("src", "images/light_sun.svg");
+        document.getElementById("logo").setAttribute("src", "images/light_chicken.png");
+    } else{
+        toggleTheme.setAttribute("data-bs-theme", '');
+        document.getElementById("theme").setAttribute("src", "images/moon.svg");
+        document.getElementById("logo").setAttribute("src", "images/dark-chicken.png");
+    }
+    
+});
+
 rangeInput.addEventListener('input', () => {
     const progressValue = rangeInput.value;
     progressBar.style.width = `${progressValue}%`;
@@ -18,19 +36,20 @@ rangeInput.addEventListener('input', () => {
     progressLabel.textContent = `${progressValue}%`;
 });
 
-const toggleButton = document.getElementById('toggleButton');
-let isOn = false;
+const toggleVent = document.getElementById('toggleButton');
+let ventOn = false;
 
-toggleButton.addEventListener('click', () => {
-    isOn = !isOn; // Toggle the state
+toggleVent.addEventListener('click', () => {
+    ventOn = !ventOn; // Toggle the state
 
-    if (isOn) {
-        toggleButton.textContent = 'On';
-        toggleButton.classList.remove('btn-danger');
-        toggleButton.classList.add('btn-success');
+    if (ventOn) {
+        toggleVent.textContent = 'On';
+        toggleVent.classList.remove('btn-danger');
+        toggleVent.classList.add('btn-success');
     } else {
-        toggleButton.textContent = 'Off';
-        toggleButton.classList.remove('btn-success');
-        toggleButton.classList.add('btn-danger');
+        toggleVent.textContent = 'Off';
+        toggleVent.classList.remove('btn-success');
+        toggleVent.classList.add('btn-danger');
     }
 });
+
